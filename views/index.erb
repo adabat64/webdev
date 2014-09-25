@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> To do list </title>
+    <h1>Hey Bitch! it's <em><%= Time.now.to_s %></em>, and you got shit to do </h1>
+</head>
+
+<body>
+<h3> What to do...</h3>
+  <form method="post" actions="/">
+    <input type="text" name="task" placeholder="Shit to do"/>
+    <input type= "date" name="date" placeholder="Due Date" />
+    <input type="submit" value="Add to do item" />
+    <
+  </form>
+
+<h3>You got dis shit to do</h3>
+<ul>
+      <% @lines.each do |line| %>
+      <li><%= line %></li>
+      <% end %>
+</ul>
+
+</body>
+</html>
