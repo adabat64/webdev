@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title> To do list </title>
     <h1>Hey Bitch! it's <em><%= Time.now.to_s %></em>, and you got shit to do </h1>
 </head>
@@ -14,12 +15,15 @@
     <
   </form>
 
+
 <h3>You got dis shit to do</h3>
-<ul>
+
+  <ul>
       <% @lines.each do |line| %>
-      <li><%= line %></li>
+      <p1><li><%= line %></li></p1>
       <% end %>
-</ul>
+  </ul>
+
 
 </body>
 </html>
