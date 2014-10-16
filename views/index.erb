@@ -9,18 +9,17 @@
 <body>
 <h3> What to do...</h3>
   <form method="post" actions="/">
-    <input type="text" name="task" placeholder="Shit to do"/>
-    <input type= "date" name="date" placeholder="Due Date" />
+    <input type="text" name="description" placeholder="Shit to do"/>
+    <input type= "date" name="due_date" placeholder="Due Date" />
     <input type="submit" value="Add to do item" />
-    <
   </form>
 
 
 <h3>You got dis shit to do</h3>
 
   <ul>
-      <% @lines.each do |line| %>
-      <p1><li><%= line %></li></p1>
+      <% @tasks.each do |task| %>
+      <p1><li><%= task.description %> due on the <%= task.due_date %></li></p1>
       <% end %>
   </ul>
 
