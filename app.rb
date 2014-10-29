@@ -21,7 +21,7 @@ else
 end
 
 get '/' do
-	@tasks = TodoItem.all
+	@tasks = TodoItem.all.order("due_date")
 	erb :index
 end
 
