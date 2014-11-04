@@ -25,7 +25,15 @@ get '/' do
 	erb :index
 end
 
+
+
 post '/' do
 	TodoItem.create(params)
 	redirect '/'
+end
+
+
+get '/delete/:items' do
+  TodoItem.find(params[:items]).destroy
+  redirect '/'
 end

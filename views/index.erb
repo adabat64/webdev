@@ -14,14 +14,24 @@
     <input type="submit" value="Add to do item" />
   </form>
 
-
 <h3>You got dis shit to do</h3>
 
   <ul>
       <% @tasks.each do |task| %>
-      <p1><li><%= task.description %> due on the <%= task.due_date %></li></p1>
-      <% end %>
+      <p1><li>
+        <% unless task.description.blank? %> <%= task.description %> <% end %>
+
+        <% unless task.due_date.blank? %> - <% end %> <%= task.due_date %>
+
+        <% unless task.description.blank? %>
+          <a style="text-decoration: none" href='/delete/<%= task.id %>'><button class="button"> Done with this shit! </button> </a> <% end %>
+        <% unless task.description.blank? %> <br> <%end%>
+
+        <% end %>
+      </li></p1>
+
   </ul>
+
 
 
 </body>
