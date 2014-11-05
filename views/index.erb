@@ -21,11 +21,11 @@
       <p1><li>
         <% unless task.description.blank? %> <%= task.description %> <% end %>
 
-        <% unless task.due_date.blank? %> - <% end %> <%= task.due_date %>
+        <% unless task.due_date.blank? %> - <%= task.due_date %> <% end %>
 
         <% unless task.description.blank? %>
           <a style="text-decoration: none" href='/delete/<%= task.id %>'><button class="button"> Done with this shit! </button> </a> <% end %>
-        <% unless task.description.blank? %> <br> <%end%>
+        <% unless task.description.blank? %> <%end%>
 
         <% end %>
       </li></p1>
