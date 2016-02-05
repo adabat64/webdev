@@ -3,18 +3,18 @@
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
   <title> To do list </title>
-    <h1>Hey Bitch! it's <em><%= Time.now.to_s %></em>, and you got shit to do </h1>
+    <h1>Hi, you're up! <br /> it's <em><%= Time.now.to_s %></em>, and you stuff to do..</h1>
 </head>
 
 <body>
-<h3> What to do...</h3>
+<h3> Add more things right here:</h3>
   <form method="post" actions="/">
     <input type="text" name="description" placeholder="Shit to do"/>
     <input type= "date" name="due_date" placeholder="Due Date" />
     <input type="submit" value="Add to do item" />
   </form>
 
-<h3>You got dis shit to do</h3>
+<h3>You have these things right here</h3>
 
   <ul>
       <% @tasks.each do |task| %>
